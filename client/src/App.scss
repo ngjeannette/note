@@ -1,0 +1,230 @@
+@import '~antd/dist/antd.css';
+
+.Main {
+    background-color: #F9F9F9;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    .ant-dropdown-trigger {
+        margin: 10px 10px 10px 0;
+
+        span:first-child {
+            padding: 10px;
+            box-shadow: 0px 1px 5px 0px rgba(158, 158, 158, 1);
+        }
+    }
+
+    .sign-action {
+
+        button,
+        span {
+            margin: 0 5px;
+        }
+
+        button:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.content {
+    height: calc(100% - 53px);
+    width: 100%;
+    overflow: auto;
+    // border: 1px solid gray;
+    box-shadow: 0px 1px 5px 0px rgba(158, 158, 158, 1);
+
+    .login {
+        // width: calc(100% - 70px);
+        display: flex;
+        height: calc(100% - 60px);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        form {
+            // width: 490px;
+        }
+    }
+
+    .notes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .sidebar {
+            width: 300px;
+            background-color: #F5F6F6;
+            height: 100%;
+            border-right: 1px solid lightgray;
+            overflow: auto;
+
+            .sidebar-notes {
+                .note {
+                    &-header {
+                        padding: 10px;
+                        background: salmon;
+                    }
+
+                    &-favorite {
+                        padding: 10px;
+                        background: #FB8F67;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        span:first-child {
+                            margin-right: 2px;
+                        }
+                    }
+
+                    &-item {
+                        padding: 10px;
+                        background: #F5F6F6;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        & span:first-child {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    &-add {
+                        padding: 10px;
+                        background: plum;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .notepage {
+            width: calc(100% - 258px);
+            // background-color: lightgray;
+            height: 100%;
+            overflow: auto;
+            padding: 10px;
+
+
+            .single-item {
+                // background: pink ;
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                margin: 5px;
+
+                textarea {
+                    height: calc(100% - 22px) !important;
+                    resize: none;
+                }
+
+                .favourite-heart {
+                    text-align: right;
+
+                    &.fill-red {
+                        button {
+                            span {
+                                svg {
+                                    fill: #FB8F67;
+                                }
+                            }
+                        }
+                    }
+
+                    &.fill-black {
+                        button {
+                            span {
+                                svg {
+                                    fill: black;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                pre {
+                    padding: 10px;
+                    white-space: normal;
+                    overflow-wrap: break-word;
+                    font-family: inherit;
+                }
+
+                .container {
+                    height: calc(100% - 22px) !important;
+                    overflow: auto;
+                }
+            }
+
+            .add-item {
+                background: sandybrown;
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .displaynotes {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .notloggedin,
+    .home {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home {
+        .home-info {
+            width: 40%;
+        }
+
+        .home-image {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+}
+
+.loginWrapper {
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

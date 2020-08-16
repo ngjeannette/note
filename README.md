@@ -7,6 +7,7 @@ Playing around with (MERN):
 * Node
 * React
 * Heroku
+* Redux
 * AWS SES (Amazon Web Services Email)
 * AWS S3 (Amazon Web Services Storage)
 
